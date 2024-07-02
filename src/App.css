@@ -1,38 +1,29 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* App.css */
+.app-container {
+  position: relative; /* Para permitir o posicionamento absoluto do Header */
+  min-height: 100vh; /* Garante que o contêiner ocupa toda a altura da viewport */
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start; /* Ajusta o alinhamento vertical */
+  padding-top: 60px; /* Espaço para o Header */
+}
+
+.app-container > * {
+  width: 100%; /* Garante que os elementos filhos ocupem toda a largura */
+}
+
+/* Estilos específicos para o Header */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px; /* Ajuste conforme necessário */
+  background-color: #333; /* Cor de fundo para exemplo */
+  color: #fff; /* Cor do texto para exemplo */
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  z-index: 1000; /* Garante que o Header esteja acima dos outros conteúdos */
 }
