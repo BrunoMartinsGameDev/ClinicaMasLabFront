@@ -1,0 +1,37 @@
+.lista-receitas { 
+
+    padding: 20px; 
+  
+  } 
+  
+   
+  
+  .lista-receitas table { 
+  
+    width: 100%; 
+  
+    border-collapse: collapse; 
+  
+  } 
+  
+   
+  
+  .lista-receitas th, .lista-receitas td { 
+  
+    border: 1px solid #ddd; 
+  
+    padding: 8px; 
+  
+    text-align: left; 
+  
+  } 
+  
+   
+  
+  .lista-receitas th { 
+  
+    background-color: #0D3B66; 
+  
+    color: white; 
+  
+  } 
