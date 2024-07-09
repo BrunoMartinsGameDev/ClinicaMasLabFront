@@ -1,0 +1,37 @@
+.prontuario { 
+
+    padding: 20px; 
+  
+  } 
+  
+   
+  
+  .prontuario table { 
+  
+    width: 100%; 
+  
+    border-collapse: collapse; 
+  
+  } 
+  
+   
+  
+  .prontuario th, .prontuario td { 
+  
+    border: 1px solid #ddd; 
+  
+    padding: 8px; 
+  
+    text-align: left; 
+  
+  } 
+  
+   
+  
+  .prontuario th { 
+  
+    background-color: #0D3B66; 
+  
+    color: white; 
+  
+  } 

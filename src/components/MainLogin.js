@@ -1,31 +1,39 @@
-import React from "react";
+import React, { useState } from 'react';
 import './MainLogin.css';
-import LogoMasLab from './LogoMasLab.PNG'; // Importar a imagem corretamente
-
-function MainLogin(){
-    return (
-        <div className="container">
-            <div className="logo">
-                <img src={LogoMasLab} alt="MasLab Logo" />
-            </div>
-            <h1>ACESSE SUA PÁGINA</h1>
-            <div className="login-form">
-                <form>
-                    <div className="input-container">
-                        <label htmlFor="cpf">CPF</label>
-                        <input type="text" id="cpf" name="cpf" placeholder="xxx.xxx.xxx-xx" />
-                    </div>
-                    <div className="input-container">
-                        <label htmlFor="senha">SENHA</label>
-                        <input type="password" id="senha" name="senha" placeholder="SUA SENHA" />
-                    </div>
-                    <button type="submit">ENTRAR</button>
-                    <a href="#" className="esqueci-senha">ESQUECI MINHA SENHA</a>
-                    <a href="#" className="criar-conta">AINDA NÃO POSSUO CONTA</a>
-                </form>
-            </div>
-        </div>
-    );
-}
-
+ 
+const MainLogin = ({ onLogin, onEmployeeButtonClick, onCadastroButtonClick }) => {
+  const [cpf, setCpf] = useState('');
+  const [senha, setSenha] = useState('');
+ 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onLogin(cpf, senha);
+  };
+ 
+  return (
+<div className="login-container">
+<h2>Acesse sua página</h2>
+<form onSubmit={handleSubmit}>
+<input
+          type="text"
+          placeholder="CPF"
+          value={cpf}
+          onChange={(e) => setCpf(e.target.value)}
+          required
+        />
+<input
+          type="password"
+          placeholder="Sua senha"
+          value={senha}
+          onChange={(e) => setSenha(e.target.value)}
+          required
+        />
+<button type="submit">Entrar</button>
+</form>
+<button onClick={onEmployeeButtonClick} className="botao-login-colaborador">Sou Colaborador</button>
+<button onClick={onCadastroButtonClick} className="botao-cadastro">Cadastrar</button>
+</div>
+  );
+};
+ 
 export default MainLogin;
