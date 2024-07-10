@@ -1,37 +1,60 @@
-.prontuario { 
+.prontuario {
+  padding: 20px;
+}
 
-    padding: 20px; 
-  
-  } 
-  
-   
-  
-  .prontuario table { 
-  
-    width: 100%; 
-  
-    border-collapse: collapse; 
-  
-  } 
-  
-   
-  
-  .prontuario th, .prontuario td { 
-  
-    border: 1px solid #ddd; 
-  
-    padding: 8px; 
-  
-    text-align: left; 
-  
-  } 
-  
-   
-  
-  .prontuario th { 
-  
-    background-color: #0D3B66; 
-  
-    color: white; 
-  
-  } 
+.prontuario table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.prontuario th,
+.prontuario td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.prontuario th {
+  background-color: #0d3b66;
+  color: white;
+}
+
+.feedback-button {
+  background-color: #204d63;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.feedback-button:hover {
+  background-color: #ff4800;
+}
+
+.feedback-form {
+  margin-top: 10px;
+}
+
+.feedback-textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.feedback-view {
+  margin-top: 10px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.feedback-view .feedback-text {
+  margin-top: 8px;
+}
+
+.feedback-view .feedback-button {
+  margin-top: 8px;
+}

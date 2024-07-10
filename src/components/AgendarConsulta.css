@@ -1,0 +1,50 @@
+/* AgendarConsulta.css */
+
+.agendar-consulta {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .agendar-consulta h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .agendar-consulta form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .agendar-consulta label {
+    margin-bottom: 10px;
+  }
+  
+  .agendar-consulta select,
+  .agendar-consulta input[type="date"],
+  .agendar-consulta input[type="time"],
+  .agendar-consulta button {
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 100%;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura do elemento */
+  }
+  
+  .agendar-consulta button {
+    background-color: #0D3B66;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .agendar-consulta button:hover {
+    background-color: #0056b3;
+  }
+  
