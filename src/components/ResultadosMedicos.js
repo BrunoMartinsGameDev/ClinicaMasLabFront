@@ -1,7 +1,7 @@
 import React from 'react';
  
 const medicos = [
-  // Estrutura de exemplo para os médicos. Pode ser substituída por dados reais.
+  
   {
     nome: 'Dr. Fulano de Tal',
     crm: '626.999-SC',
@@ -9,7 +9,7 @@ const medicos = [
     telefone: '(48)99999-1399',
     especialidade: 'Dermatologista'
   },
-  // Adicione mais médicos aqui...
+  // Adicionar mais exemplo here
 ];
  
 const ResultadosMedicos = ({ especialidade, onSelect }) => {
@@ -31,5 +31,4 @@ const ResultadosMedicos = ({ especialidade, onSelect }) => {
 </div>
   );
 };
- 
 export default ResultadosMedicos;
