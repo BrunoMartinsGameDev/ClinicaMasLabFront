@@ -1,0 +1,37 @@
+.lista-agendamentos { 
+
+    padding: 20px; 
+  
+  } 
+  
+   
+  
+  .lista-agendamentos table { 
+  
+    width: 100%; 
+  
+    border-collapse: collapse; 
+  
+  } 
+  
+   
+  
+  .lista-agendamentos th, .lista-agendamentos td { 
+  
+    border: 1px solid #ddd; 
+  
+    padding: 8px; 
+  
+    text-align: left; 
+  
+  } 
+  
+   
+  
+  .lista-agendamentos th { 
+  
+    background-color: #0D3B66; 
+  
+    color: white; 
+  
+  } 

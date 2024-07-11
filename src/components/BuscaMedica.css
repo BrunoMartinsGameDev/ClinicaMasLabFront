@@ -1,0 +1,73 @@
+/* Estilos para BuscaMedica */
+.busca-medica {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.resultados-busca {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-especialidade {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+  text-align: center;
+}
+
+.card-especialidade:hover {
+  transform: scale(1.05);
+}
+
+.imagem-medico-container {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.imagem-medico {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-especialidade p {
+  margin: 5px 0;
+}

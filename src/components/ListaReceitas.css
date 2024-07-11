@@ -1,0 +1,91 @@
+/* ListaReceitas.css */
+
+.lista-receitas {
+  padding: 20px;
+}
+
+.lista-receitas table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.lista-receitas th, .lista-receitas td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.lista-receitas th {
+  background-color: #0D3B66;
+  color: white;
+}
+
+/* Estilos adicionais para o botão Ver Receita */
+.lista-receitas .ver-receita {
+  background-color: #204d63; 
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.lista-receitas .ver-receita:hover {
+  background-color: #ff4c29; /* Cor vermelha mais escura no hover */
+}
+
+/* Estilos para o modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 60%;
+  max-width: 600px;
+  position: relative;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-content p {
+  margin-bottom: 10px;
+}
+
+.modal-content button {
+  background-color: #204d63;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+  background-color: #204d63;
+}
+
+.modal .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.modal .close:hover {
+  color: black;
+}
