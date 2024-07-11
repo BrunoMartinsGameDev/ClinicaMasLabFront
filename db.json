@@ -1,0 +1,62 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "login": "111.111.111-11",
+      "password": "admin"
+    },
+    {
+      "id": "2",
+      "login": "111111",
+      "password": "admin"
+    },
+    {
+      "id": "6268",
+      "login": "111.111.111-11",
+      "password": "admin"
+    },
+    {
+      "id": "eb20",
+      "login": "111.111.111-11",
+      "password": "admin"
+    },
+    {
+      "id": "3b5a",
+      "login": "111.111.111-11",
+      "password": "admin"
+    },
+    {
+      "id": "a436",
+      "login": "111.111.111-11",
+      "password": "admin"
+    },
+    {
+      "id": "0594",
+      "login": "111.111.111-11",
+      "password": "admin"
+    },
+    {
+      "id": "b58c",
+      "login": "111.111.111-11",
+      "password": "admin"
+    },
+    {
+      "id": "8d72",
+      "login": "111.111.111-11",
+      "password": "admin"
+    },
+    {
+      "id": "899a",
+      "login": "111.111.111-11",
+      "password": "admin"
+    },
+    {
+      "id": "df86",
+      "login": "222.222.222-22",
+      "password": "mano2010",
+      "nome": "sdsdfsdfsddf aaa",
+      "telefone": "54645654",
+      "email": "a@aaaa.com"
+    }
+  ]
+}

@@ -8,24 +8,24 @@ const LoginMedico = ({ onEmployeeLogin, onPatientButtonClick }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    try {
-      const response = await axios.post('http://localhost:8080/auth/login', {
-        login: crm, // Envia o CRM como usuário
-        password: senha,
-        role: "MEDICO"
-      });
 
-      // Aqui você pode processar a resposta do servidor, por exemplo, verificar se o login foi bem-sucedido
-      if (response.data.authenticated) {
-        onEmployeeLogin(crm, senha); // Chama a função de login de médico passando CRM e senha
+    console.log('Dados enviados para o servidor:', {
+      login: crm,
+      password: senha,
+    });
+
+    try {
+      const response = await axios.get('http://localhost:3001/users');
+      const users = response.data;
+      const user = users.find(u => u.login === crm && u.password === senha);
+
+      if (user) {
+        onEmployeeLogin(crm, senha); // Corrigido para chamar onEmployeeLogin com CRM e senha
       } else {
-        console.log('Login inválido. Verifique suas credenciais.');
-        // Tratar caso de login inválido
+        alert('Login falhou');
       }
     } catch (error) {
-      console.error('Erro ao tentar validar login:', error);
-      // Tratar o erro aqui, por exemplo, exibindo uma mensagem de erro para o usuário
+      console.error('Erro', error);
     }
   };
 
@@ -49,7 +49,9 @@ const LoginMedico = ({ onEmployeeLogin, onPatientButtonClick }) => {
         />
         <button type="submit">Entrar</button>
       </form>
-      <button onClick={onPatientButtonClick} className="botao-login-medico">Sou Paciente</button>
+      <button onClick={onPatientButtonClick} className="botao-login-medico">
+        Sou Paciente
+      </button>
     </div>
   );
 };

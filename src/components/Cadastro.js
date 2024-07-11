@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import './Cadastro.css';
+import axios from 'axios';
 
 const Cadastro = ({ onRegisterSuccess }) => {
   const [nome, setNome] = useState('');
@@ -32,7 +33,7 @@ const Cadastro = ({ onRegisterSuccess }) => {
     }
 
     if (!senha.match(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/)) {
-      formErrors.senha = 'A senha deve conter no minimo 6 caracteres entre letras e números.';
+      formErrors.senha = 'A senha deve conter no mínimo 8 caracteres entre letras e números.';
     }
 
     if (senha !== confirmaSenha) {
@@ -53,11 +54,33 @@ const Cadastro = ({ onRegisterSuccess }) => {
     setCpf(formattedCpf);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    
     if (validateForm()) {
-      alert('Cadastro efetuado com sucesso, enviamos um código de verificação para seu e-mail');
-      onRegisterSuccess();
+      console.log('Dados enviados para o servidor:', {
+        login: cpf,
+        password: senha,
+        nome,
+        telefone,
+        email,
+      });
+
+      try {
+        await axios.post('http://localhost:3001/users', {
+          login: cpf,
+          password: senha,
+          nome,
+          telefone,
+          email,
+        });
+
+        alert('Cadastro efetuado com sucesso, enviamos um código de verificação para seu e-mail');
+        onRegisterSuccess();
+      } catch (error) {
+        console.error('Erro ao cadastrar:', error);
+        alert('Erro ao cadastrar, por favor tente novamente.');
+      }
     }
   };
 

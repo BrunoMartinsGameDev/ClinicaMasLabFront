@@ -10,9 +10,9 @@ import ListaAgendamentos from './components/ListaAgendamento';
 import GerarDocumento from './components/GerarDocumento';
 import ResultadosMedicos from './components/ResultadosMedicos';
 import Agendamento from './components/Agendamento';
-import Fundo from './components/Fundo'; // Importe o componente de Fundo
-import Cadastro from './components/Cadastro'; // Importe o componente de Cadastro
-import AgendarConsulta from './components/AgendarConsulta'; // Importe o componente de AgendarConsulta
+import Fundo from './components/Fundo';
+import Cadastro from './components/Cadastro';
+import AgendarConsulta from './components/AgendarConsulta';
 import './App.css';
 
 const App = () => {
@@ -25,46 +25,46 @@ const App = () => {
 
   const handleLogin = (cpf, senha) => {
     setIsLoggedIn(true);
-    setNomeUsuario('Antony Kutinsky');
+    setNomeUsuario('Antony Kutinsky'); // Aqui pode ser feita a lógica para obter o nome do usuário
     setIsUser(true);
-    setCurrentView('menu');
+    setCurrentView('menu'); // Redireciona para a página do menu após o login
   };
 
   const handleEmployeeLogin = (crm, senha) => {
     setIsLoggedIn(true);
-    setNomeUsuario('Dr. Fulano de Tal');
+    setNomeUsuario('Dr. Fulano de Tal'); // Aqui pode ser feita a lógica para obter o nome do médico
     setIsUser(false);
-    setCurrentView('menu');
+    setCurrentView('menu'); // Redireciona para a página do menu após o login
   };
 
   const handleLogout = () => {
     setIsLoggedIn(false);
     setNomeUsuario('');
-    setCurrentView('mainLogin');
+    setCurrentView('mainLogin'); // Redireciona para a página de login após o logout
   };
 
   const handleHome = () => {
-    setCurrentView('menu');
+    setCurrentView('menu'); // Redireciona para a página do menu a partir de qualquer outra página
   };
 
   const handleSearch = (especialidade) => {
     setSelectedEspecialidade(especialidade);
-    setCurrentView('resultadosMedicos');
+    setCurrentView('resultadosMedicos'); // Redireciona para os resultados de médicos após a busca
   };
 
   const handleSelectMedico = (medico) => {
     setSelectedMedico(medico);
-    setCurrentView('agendamento');
+    setCurrentView('agendamento'); // Redireciona para a página de agendamento após selecionar um médico
   };
 
   const handleRegisterSuccess = () => {
-    setCurrentView('mainLogin');
+    setCurrentView('mainLogin'); // Redireciona para a página de login após um cadastro bem-sucedido
   };
 
   const handleAgendarConsulta = (data, hora) => {
     // Lógica para agendar a consulta (pode ser integrada com uma API)
     console.log(`Consulta agendada para ${data} às ${hora}`);
-    setCurrentView('menu');
+    setCurrentView('menu'); // Redireciona para a página do menu após agendar a consulta
   };
 
   const renderView = () => {
@@ -73,7 +73,7 @@ const App = () => {
         return <MainLogin onLogin={handleLogin} onEmployeeButtonClick={() => setCurrentView('loginMedico')} onCadastroButtonClick={() => setCurrentView('cadastro')} />;
       case 'loginMedico':
         return <LoginMedico onEmployeeLogin={handleEmployeeLogin} onPatientButtonClick={() => setCurrentView('mainLogin')} />;
-      case 'cadastro': // Novo case para cadastro
+      case 'cadastro':
         return <Cadastro onRegisterSuccess={handleRegisterSuccess} />;
       case 'menu':
         return isUser ? <MenuUsuario onOptionClick={setCurrentView} /> : <MenuMedico onOptionClick={setCurrentView} />;
